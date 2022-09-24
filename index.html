@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="pizzaCalc.js" defer></script>
+    <link rel="stylesheet" href="pizza.css">
     <title>Pizza dough calculator</title>
 </head>
 
@@ -13,34 +14,86 @@
 
     <h1>
         Pizza dough calculator
-    </h1><br>
-
-    <div>
-        How many pizzas do you want?
-    </div> <br>
-
-    <input type="text" id='amountOfPizzas' placeholder='pizza(s)' value = '1'><br>
-    <input type="text" id='pizzaSize' placeholder="grams (dough balls)" value = '250'><br>
-    <div> small pizza = 200g, big pizza = 300g</div> <br> <br>
-
-    <input type="text" id='waterContent' placeholder="water content (%)" value = '57'>
-
-    <div>
-        (goes from 50% to 70% water content, 57% being the default value. Watch the video to understand why it matters)
-    </div> <br>
-
-    <button id="calculateQuantity" >Calculate</button> <br> <br>
-
-    <h1>
-        You need:
     </h1>
 
-    <div id="ingredientsNeeded">
-        flour: <span id='flourNeeded'></span> g <br>
-        water: <span id="waterNeeded"></span> g <br>
-        salt: <span id="saltNeeded"></span> g <br>
-        yeast: <span id="yeastNeeded"></span> g <br>
+    <div class='everything'>
+        <div>
+            amount of pizzas:
+        </div>
 
+        <div class="input">
+            <input type="text" id='amountOfPizzas' placeholder='pizza(s)' value='1' class="calc">
+        </div>
+
+        <div>
+            pizza size (small pizza = 200g, big pizza = 300g):
+        </div>
+
+        <div class="input">
+            <input type="text" id='pizzaSize' placeholder="grams (dough balls)" value='250' class="calc">
+        </div>
+
+        <div>
+            <abbr title="(goes from 50% to 70% water content, 57% being the default value)">Water content ℹ️</abbr>
+        </div>
+
+        <div class="input">
+            <input type="text" id='waterContent' placeholder="water content (%)" value='57' class="calc">
+        </div>
+
+
+        <div>
+            <button id="calculateQuantity">Calculate</button>
+        </div>
+
+        <h1>
+            You need:
+        </h1>
+
+        <div id="ingredientsNeeded">
+            <table>
+                <tr>
+                    <th>
+                        <div class="result">
+                            Ingredients:
+                        </div>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class='result'>
+                            flour: <span id='flourNeeded'></span> g
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class='result'>
+                            water: <span id="waterNeeded"></span> g
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class='result'>
+                            salt: <span id="saltNeeded"></span> g
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class='result'>
+                            yeast: <span id="yeastNeeded"></span> g
+                        </div>
+                    </td>
+                </tr>
+
+        </div>
+
+        </table>
     </div>
 
 </body>

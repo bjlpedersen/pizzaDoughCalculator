@@ -1,5 +1,10 @@
 const ingredientsNeeded = document.getElementById("ingredientsNeeded")
-ingredientsNeeded.style.display = 'none'
+// ingredientsNeeded.style.display = 'none'
+
+const allInputs = document.getElementsByClassName('calc')
+Array.from(allInputs).forEach(el => {
+    el.addEventListener("input", calculateAmount);
+});
 
 button = document.getElementById('calculateQuantity')
 button.addEventListener("click", calculateAmount);
@@ -19,5 +24,7 @@ function calculateAmount() {
     document.getElementById('saltNeeded').innerHTML = salt
     document.getElementById('yeastNeeded').innerHTML = yeast
 
-    ingredientsNeeded.style.display = 'block'
+    // ingredientsNeeded.style.display = 'block'
 }
+
+calculateAmount()
